@@ -6,12 +6,12 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Auth with ChangeNotifier {
-  Timer _authTimer;
-  String _idToken, userId;
-  DateTime _expiryDate;
+  late Timer _authTimer;
+  late String _idToken, userId;
+  late DateTime _expiryDate;
 
-  String _tempidToken, tempuserId;
-  DateTime _tempexpiryDate;
+  late String _tempidToken, tempuserId;
+  late DateTime _tempexpiryDate;
 
   Future<void> tempData() async {
     _idToken = _tempidToken;
@@ -36,7 +36,7 @@ class Auth with ChangeNotifier {
     return token != null;
   }
 
-  String get token {
+  String? get token {
     if (_idToken != null &&
         _expiryDate.isAfter(DateTime.now()) &&
         _expiryDate != null) {
@@ -110,12 +110,12 @@ class Auth with ChangeNotifier {
   }
 
   Future<void> logout() async {
-    _idToken = null;
-    userId = null;
-    _expiryDate = null;
+    _idToken != null;
+    userId != null;
+    _expiryDate != null;
     if (_authTimer != null) {
       _authTimer.cancel();
-      _authTimer = null;
+      _authTimer != null;
     }
 
     final pref = await SharedPreferences.getInstance();

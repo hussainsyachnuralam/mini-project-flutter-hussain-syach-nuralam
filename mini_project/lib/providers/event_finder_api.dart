@@ -141,4 +141,6 @@ class EventFinderAPI {
         .toList();
     return genres;
   }
+
+  inisialData() {}
 }

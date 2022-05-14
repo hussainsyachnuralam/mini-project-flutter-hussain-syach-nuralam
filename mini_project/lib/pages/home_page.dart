@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/events.dart';
+import '../providers/event_finder_api.dart';
 import '../providers/auth.dart';
 
 import '../pages/event_page.dart';
@@ -22,7 +22,9 @@ class _HomePageState extends State<HomePage> {
   void didChangeDependencies() {
     if (isInit) {
       isLoading = true;
-      Provider.of<Events>(context, listen: false).inisialData().then((value) {
+      Provider.of<EventFinderAPI>(context, listen: false)
+          .inisialData()
+          .then((value) {
         setState(() {
           isLoading = false;
         });
@@ -59,18 +61,18 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final prov = Provider.of<Products>(context);
+    final prov = Provider.of<EventFinderAPI>(context);
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.logout),
           onPressed: () => Provider.of<Auth>(context, listen: false).logout(),
         ),
-        title: Text("All Products"),
+        title: Text("All Events"),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () => Navigator.pushNamed(context, AddProductPage.route),
+            onPressed: () => Navigator.pushNamed(context, EventPage.route),
           ),
         ],
       ),
@@ -78,7 +80,7 @@ class _HomePageState extends State<HomePage> {
           ? Center(
               child: CircularProgressIndicator(),
             )
-          : (prov.allProduct.length == 0)
+          : (prov.allEvent.length == 0)
               ? Center(
                   child: Text(
                     "No Data",

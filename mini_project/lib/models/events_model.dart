@@ -40,6 +40,8 @@ class Events {
       @required this.datetimeUtc,
       @required this.datetimeLocal,
       @required this.description,
+      @required this.title,
+      @required this.venue,
       @required this.performers});
 
   Events.fromJson(Map<String, dynamic> json) {
@@ -74,6 +76,8 @@ class Events {
     data['description'] = this.description;
     return data;
   }
+
+  updateData(String token, String userId) {}
 }
 
 class Venue {

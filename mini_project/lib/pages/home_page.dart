@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   void didChangeDependencies() {
     if (isInit) {
       isLoading = true;
-      Provider.of<Products>(context, listen: false).inisialData().then((value) {
+      Provider.of<Events>(context, listen: false).inisialData().then((value) {
         setState(() {
           isLoading = false;
         });

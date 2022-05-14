@@ -1,5 +1,33 @@
 import 'package:flutter/material.dart';
 
+class EventsModel {
+  List<Events>? events;
+  Meta? meta;
+
+  EventsModel({this.events, this.meta});
+
+  EventsModel.fromJson(Map<String, dynamic> json) {
+    if (json['events'] != null) {
+      events = <Events>[];
+      json['events'].forEach((v) {
+        events!.add(new Events.fromJson(v));
+      });
+    }
+    meta = json['meta'] != null ? new Meta.fromJson(json['meta']) : null;
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.events != null) {
+      data['events'] = this.events!.map((v) => v.toJson()).toList();
+    }
+    if (this.meta != null) {
+      data['meta'] = this.meta!.toJson();
+    }
+    return data;
+  }
+}
+
 class Events {
   String? type, datetimeUtc, datetimeLocal, title, description;
   List<Performers>? performers;

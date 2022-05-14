@@ -90,12 +90,13 @@ class _HomePageState extends State<HomePage> {
                   ),
                 )
               : ListView.builder(
-                  itemCount: prov.allProduct.length,
-                  itemBuilder: (context, i) => ProductItem(
-                    prov.allProduct[i].id,
-                    prov.allProduct[i].title,
-                    prov.allProduct[i].price,
-                    prov.allProduct[i].updatedAt,
+                  itemCount: prov.allEvent.length,
+                  itemBuilder: (context, i) => EventItem(
+                    prov.allEvent[e].id,
+                    prov.allEvent[e].title,,
+                    prov.allEvent[e].type,,
+                    prov.allEvent[e].performers,
+                    prov.allEvent[e].genres,
                   ),
                 ),
     );

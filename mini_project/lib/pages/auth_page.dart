@@ -5,8 +5,8 @@ import 'package:provider/provider.dart';
 import '../providers/auth.dart';
 
 const users = const {
-  'dribbble@gmail.com': '12345',
-  'hunter@gmail.com': 'hunter',
+  'piestro123@gmail.com': 'admin',
+  'huhyunjin@gmail.com': 'slayification',
 };
 
 class LoginPage extends StatefulWidget {

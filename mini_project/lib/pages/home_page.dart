@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/products.dart';
+import '../providers/events.dart';
 import '../providers/auth.dart';
 
 import '../pages/add_product_page.dart';
-import '../widgets/product_item.dart';
+import '../widgets/event_item.dart';
 
 class HomePage extends StatefulWidget {
   static const route = "/home";

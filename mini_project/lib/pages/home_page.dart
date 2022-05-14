@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/events.dart';
 import '../providers/auth.dart';
 
-import '../pages/add_product_page.dart';
+import '../pages/event_page.dart';
 import '../widgets/event_item.dart';
 
 class HomePage extends StatefulWidget {

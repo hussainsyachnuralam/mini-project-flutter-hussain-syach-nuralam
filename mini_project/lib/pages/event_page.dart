@@ -13,14 +13,7 @@ class EventPage extends StatefulWidget {
 }
 
 class _EventPageState extends State<EventPage> {
-  List<Events> values = [
-    'assets/img01.png',
-    'assets/img02.png',
-    'assets/img03.png',
-    'assets/img04.png',
-    'assets/img05.png',
-    'assets/img06.png'
-  ];
+  List<Events> values = [''];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,9 +35,6 @@ class _EventPageState extends State<EventPage> {
                 },
                 child: Card(
                   elevation: 10,
-                  child: Center(
-                    child: Image.asset(values[index]),
-                  ),
                 ),
               );
             },

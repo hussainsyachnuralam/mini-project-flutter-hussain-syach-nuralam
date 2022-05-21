@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:eventder/controller/sqlite.dart';
 import 'package:eventder/models/event.dart';
 
 class EventViewModel extends ChangeNotifier {

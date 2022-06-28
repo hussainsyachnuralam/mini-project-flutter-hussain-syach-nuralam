@@ -10,10 +10,10 @@ import '../domain/user.dart';
 import '../screens/login.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Home());
 }
 
-class MyApp extends StatelessWidget {
+class Home extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import '../screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:eventder/auth.dart';
-import 'package:eventder/home.dart';
+// import 'package:eventder/auth.dart';
+import '../screens/home.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({key}) : super(key: key);

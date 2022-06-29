@@ -78,6 +78,7 @@ class _EvenItemViewState extends State<EvenItemView> {
                             widget.event.venue!.displayLocation!,
                             style: const TextStyle(
                                 fontWeight: FontWeight.normal,
+                                fontSize: 10,
                                 color: Colors.black54),
                           ),
                         ),
@@ -85,6 +86,7 @@ class _EvenItemViewState extends State<EvenItemView> {
                           parseDate(widget.event.datetimeUtc!),
                           style: const TextStyle(
                               fontWeight: FontWeight.normal,
+                              fontSize: 10,
                               color: Colors.black54),
                         )
                       ],

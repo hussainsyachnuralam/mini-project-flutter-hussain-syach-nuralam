@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // set time to load the new page
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Home()));
+          context, MaterialPageRoute(builder: (context) => Eligibility()));
     });
     super.initState();
   }

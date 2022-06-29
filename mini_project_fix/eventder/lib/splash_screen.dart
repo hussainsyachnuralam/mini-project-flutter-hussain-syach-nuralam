@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:eventder/auth.dart';
 import 'package:eventder/home.dart';
+import 'eligibility_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({key}) : super(key: key);
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // set time to load the new page
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Home()));
+          context, MaterialPageRoute(builder: (context) => Eligibility()));
     });
     super.initState();
   }

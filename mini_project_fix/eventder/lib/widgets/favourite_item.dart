@@ -75,6 +75,7 @@ class FavouriteItem extends StatelessWidget {
                           favourite.location!,
                           style: const TextStyle(
                               fontWeight: FontWeight.normal,
+                              fontSize: 10,
                               color: Colors.black54),
                         ),
                       ),
@@ -82,6 +83,7 @@ class FavouriteItem extends StatelessWidget {
                         parseDate(favourite.eventTime!),
                         style: const TextStyle(
                             fontWeight: FontWeight.normal,
+                            fontSize: 10,
                             color: Colors.black54),
                       )
                     ],

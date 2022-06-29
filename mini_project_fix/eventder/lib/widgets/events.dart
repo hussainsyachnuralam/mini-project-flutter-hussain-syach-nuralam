@@ -46,15 +46,15 @@ class _EventsState extends State<Events> {
     }
   }
 
-  Widget _buildSearchBox() {
-    return Padding(
-      padding: const EdgeInsets.all(8),
-      child: SearchBar(
-        controller: _searchController,
-        focusNode: _searchFocus,
-      ),
-    );
-  }
+  // Widget _buildSearchBox() {
+  //   return Padding(
+  //     padding: const EdgeInsets.all(8),
+  //     child: SearchBar(
+  //       controller: _searchController,
+  //       focusNode: _searchFocus,
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class _EventsState extends State<Events> {
       child: SafeArea(
         child: Column(
           children: [
-            _buildSearchBox(),
+            // _buildSearchBox(),
             Expanded(
               child: !_loading
                   ? _events.isEmpty

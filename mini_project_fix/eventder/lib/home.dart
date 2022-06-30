@@ -20,14 +20,14 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    bool count = false;
-    if (count != false) {
-      count = true;
-      Future.delayed(Duration(seconds: 5), () {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Eligibility()));
-      });
-    }
+    // bool count = false;
+    // if (count != false) {
+    //   count = true;
+    //   Future.delayed(Duration(seconds: 5), () {
+    //     Navigator.pushReplacement(
+    //         context, MaterialPageRoute(builder: (context) => Eligibility()));
+    //   });
+    // }
     if (!kIsWeb) {
       Bhandaram.init();
     }

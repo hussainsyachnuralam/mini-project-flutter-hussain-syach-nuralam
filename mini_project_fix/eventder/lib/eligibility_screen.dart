@@ -9,14 +9,10 @@ class Eligibility extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: EligiblityScreen(),
-      routes: {
-        '/home': (context) => const Home(),
-      },
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: EligiblityScreen());
   }
 }

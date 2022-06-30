@@ -1,5 +1,7 @@
+import 'package:eventder/eligibility_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:eventder/data/bhandaram.dart';
 import 'widgets/events.dart';
@@ -18,6 +20,14 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    bool count = false;
+    if (count != false) {
+      count = true;
+      Future.delayed(Duration(seconds: 5), () {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Eligibility()));
+      });
+    }
     if (!kIsWeb) {
       Bhandaram.init();
     }
